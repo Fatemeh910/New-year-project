@@ -10,7 +10,8 @@ const diffrentTime = newYearDate - currentDate;
 
 const days = Math.floor(diffrentTime / oneDay);
 const hours = Math.floor((diffrentTime % oneDay) / oneHour);
-
+const minutes = Math.floor((diffrentTime % oneHour) / oneMinute);
+const seconds = Math.floor((diffrentTime % oneMinute) / 1000);
 };
 
 const interval = setInterval(counter,1000); 
