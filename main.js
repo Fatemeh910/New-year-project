@@ -8,7 +8,9 @@ const currentDate = new Date().getTime();
 
 const diffrentTime = newYearDate - currentDate;
 
-const days = diffrentTime /
+const days = Math.floor(diffrentTime / oneDay);
+const hours = Math.floor((diffrentTime % oneDay) / oneHour);
+
 };
 
 const interval = setInterval(counter,1000); 
