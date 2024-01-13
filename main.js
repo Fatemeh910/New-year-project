@@ -20,6 +20,11 @@ const deadLineNumbers = document.querySelectorAll(".dead-line-number");
 deadLineNumbers.forEach((item, index) => {
     item.innerHTML = values[index];
 });
+//اینجا اگرمدت زمان کمترازصفربش یعنی سال تحویل بشه میادالمنت رو تمام مقادیروحذف میکنه ومینویسه هپی نیویر 
+if(diffrentTime <= 0){
+    const newYearBox = document.querySelector(".new-year-wrapper");
+    newYearBox.innerHTML = "Happy new year🎉";
+}
 };
 
 const interval = setInterval(counter,1000); 
