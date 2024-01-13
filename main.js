@@ -15,8 +15,9 @@ const seconds = Math.floor((diffrentTime % oneMinute) / 1000);
 
 const values = [days,hours,minutes,seconds];
 
-const daedLineNumbers = document.querySelectorAll("daed-line-number");
-daedLineNumbers.forEach((item, index) => {
+const deadLineNumbers = document.querySelectorAll(".dead-line-number");
+
+deadLineNumbers.forEach((item, index) => {
     item.innerHTML = values[index];
 });
 };
