@@ -3,7 +3,7 @@ const oneHour = 60 * 60 * 1000;
 const oneMinute =  60 * 1000;
 
 const counter = () =>{
-const newYearDate = new Date("1 jan 2024").getTime();
+const newYearDate = new Date("1 jan 2025").getTime();
 const currentDate = new Date().getTime();
 
 const diffrentTime = newYearDate - currentDate;
