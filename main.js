@@ -1,3 +1,4 @@
+///چگونه مقدارزمان راتبدیل کنیم به میلی ثانیه
 const oneDay = 24 * 60 * 60 * 1000;
 const oneHour = 60 * 60 * 1000;
 const oneMinute =  60 * 1000;
@@ -7,7 +8,7 @@ const newYearDate = new Date("1 jan 2025").getTime();
 const currentDate = new Date().getTime();
 
 const diffrentTime = newYearDate - currentDate;
-
+/// تبدیل تایم به روز ساعت دقیقه وثانیه وباتابع فلوراعشارانرا ازبین بردیم
 const days = Math.floor(diffrentTime / oneDay);
 const hours = Math.floor((diffrentTime % oneDay) / oneHour);
 const minutes = Math.floor((diffrentTime % oneHour) / oneMinute);
@@ -27,9 +28,10 @@ if(diffrentTime <= 0){
     clearInterval(interval);
 }
 };
+///فانکشن کمکی برای صفرگذاشتن کنارعدد
 const formatNumber = (Number)=>{
    if(Number <10) {
-    return `0 ${Number}`;
+    return `0${Number}`;
    } else {
     return Number;
    }
