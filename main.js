@@ -14,6 +14,11 @@ const minutes = Math.floor((diffrentTime % oneHour) / oneMinute);
 const seconds = Math.floor((diffrentTime % oneMinute) / 1000);
 
 const values = [days,hours,minutes,seconds];
+
+const daedLineNumbers = document.querySelectorAll("daed-line-number");
+daedLineNumbers.forEach((item, index) => {
+    item.innerHTML = values[index];
+});
 };
 
 const interval = setInterval(counter,1000); 
