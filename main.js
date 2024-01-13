@@ -18,7 +18,7 @@ const values = [days,hours,minutes,seconds];
 const deadLineNumbers = document.querySelectorAll(".dead-line-number");
 
 deadLineNumbers.forEach((item, index) => {
-    item.innerHTML = values[index];
+    item.innerHTML = formatNumber(values[index]);
 });
 //اینجا اگرمدت زمان کمترازصفربش یعنی سال تحویل بشه میادالمنت رو تمام مقادیروحذف میکنه ومینویسه هپی نیویر 
 if(diffrentTime <= 0){
@@ -26,6 +26,14 @@ if(diffrentTime <= 0){
     newYearBox.innerHTML = "<h1>Happy new year🎉</h1>";
     clearInterval(interval);
 }
+};
+const formatNumber = (Number)=>{
+   if(Number <10) {
+    return `0 ${Number}`;
+   } else {
+    return Number;
+   }
+   
 };
 
 const interval = setInterval(counter,1000); 
